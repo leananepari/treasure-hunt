@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { graph, roomsInfo } from '../data';
 import Row from './Row';
 
+
 const Main = () => {
   const [array, setArray] = useState([]);
   const [selected, setSelected] = useState({id: ""});
@@ -23,14 +24,14 @@ const Main = () => {
        map[x][y] = {room: false, id: -1, roomData: '', left: false, right: false, up: false, down: false, x: x, y: y}
     }
    
-    const map = createMap(50, 50);
+    const map = createMap(30, 30);
     setArray(map);
 
   }, [])
 
   const mapRooms = (e) => {
-    let row = 25;
-    let column = 25;
+    let row = 15;
+    let column = 15;
     let stack = [{"direction": null, "node": 0}];
     let visited = {};
 
